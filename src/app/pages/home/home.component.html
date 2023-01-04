@@ -1,1 +1,35 @@
-<p>home works!</p>
+<div class="container-fluid">
+    <form  >
+        <h1>validacion</h1>
+        <div class="row g-3 align-items-center">
+            <div class="col-auto">
+              <label for="nombre" class="col-form-label">Nombre:</label>
+            </div>
+            <div class="col-auto">
+              <input type="text" id="nombre" class="form-control" aria-describedby="name">
+            </div>
+            <div class="col-auto">
+              <span id="name" class="form-text">
+                Must be 10 characters long.
+              </span>
+            </div>
+          </div>
+          <br>
+          <div class="row g-3 align-items-center">
+            <div class="col-auto">
+              <label for="correo" class="col-form-label">Email:</label>
+            </div>
+            <div class="col-auto">
+              <input type="email" id="correo" class="form-control" aria-describedby="enmail">
+            </div>
+            <div class="col-auto">
+              <span id="enmail" class="form-text">
+               the email is invalid.
+              </span>
+            </div>
+          </div>
+          <div>
+          <button type="submit">send</button>
+         </div> 
+    </form>
+</div>

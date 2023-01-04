@@ -1,14 +1,14 @@
-<div class="container-fluid">
-    <form  >
+<div class="container">
+    <form [formGroup]="formlogin" (submit)="send()">
         <h1>validacion</h1>
         <div class="row g-3 align-items-center">
             <div class="col-auto">
               <label for="nombre" class="col-form-label">Nombre:</label>
             </div>
-            <div class="col-auto">
-              <input type="text" id="nombre" class="form-control" aria-describedby="name">
+            <div class="col-5">
+              <input type="text" formControlName="nombre" id="nombre" class="form-control" aria-describedby="name" rounded >
             </div>
-            <div class="col-auto">
+            <div class="col-5">
               <span id="name" class="form-text">
                 Must be 10 characters long.
               </span>
@@ -17,19 +17,23 @@
           <br>
           <div class="row g-3 align-items-center">
             <div class="col-auto">
-              <label for="correo" class="col-form-label">Email:</label>
+              <label for="correo"   class="col-form-label">Email:</label>
             </div>
-            <div class="col-auto">
-              <input type="email" id="correo" class="form-control" aria-describedby="enmail">
+            <div class="col-5">
+              <input type="email"  formControlName="correo" id="correo" class="form-control" aria-describedby="enmail" rounded >
             </div>
-            <div class="col-auto">
+            <div class="col-5">
               <span id="enmail" class="form-text">
-               the email is invalid.
+               email  invalid.
               </span>
             </div>
           </div>
           <div>
-          <button type="submit">send</button>
-         </div> 
+          <button type="submit" [disabled]="formlogin.invalid">send</button>
+         </div>
     </form>
+</div>
+
+<div class=" p-4 text-black text-1xl text-yellow-400 mt-4 color" >
+    {{formlogin.value | json}}
 </div>

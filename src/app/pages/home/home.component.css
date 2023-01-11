@@ -8,9 +8,10 @@
  .color{
     background-color: rgb(204, 157, 248);
     border-radius: 5px;
-    border: 1px solid blueviolet;
+    border: 2px solid blueviolet;
     width: 99%;
     margin-left: 2px;
+
  }
  .container{
     border: 1px solid blue;
@@ -25,3 +26,5 @@
    text-align: center;
    color: rgb(91, 72, 239);
  }
+ 
+ 
